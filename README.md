@@ -1,37 +1,64 @@
-# ACE-ACADEMY-PYTHON-PROJECT
-README: Sales Data Analysis
-Overview
-This project performs data cleaning and exploratory data analysis (EDA) on a sales dataset. It utilizes Pandas for data manipulation, Matplotlib and Seaborn for visualization.
+# Sales Data Analysis
 
-Features
-Data Cleaning:
-Converts ORDERDATE to datetime format.
-Drops unnecessary columns (ADDRESSLINE1, ADDRESSLINE2, PHONE, etc.).
-Fills missing values in categorical columns (STATE, POSTALCODE, TERRITORY).
-Data Analysis:
-Displays cleaned dataset information and first few rows.
-Provides summary statistics (mean, standard deviation, min, max, etc.).
-Computes mode values for numerical columns.
-Data Visualization:
-Annual Sales Trend – Line plot of total sales per year.
-Monthly Sales Trend – Bar chart of total sales per month.
-Top-Performing Product Lines – Bar chart of sales by product line.
-Requirements
-Ensure the following Python libraries are installed before running the script:
+## 📌 Overview
+This project analyzes sales data from a CSV file (`sales_data.csv`). The script cleans the data, generates summary statistics, and visualizes sales trends to gain insights into business performance.
+
+## 🛠 Features
+### 🔹 Data Cleaning
+- Converts `ORDERDATE` to datetime format.
+- Drops unnecessary columns (`ADDRESSLINE1`, `ADDRESSLINE2`, `PHONE`, `CONTACTLASTNAME`, `CONTACTFIRSTNAME`).
+- Fills missing values in `STATE`, `POSTALCODE`, and `TERRITORY` with `"Unknown"`.
+
+### 🔹 Statistical Summary
+- Computes descriptive statistics (`mean`, `min`, `max`, `std`, etc.) for:
+  - `SALES`
+  - `QUANTITYORDERED`
+  - `PRICEEACH`
+- Calculates mode for these numerical columns.
+
+### 🔹 Data Visualization
+- **Annual Sales Trend:** Line chart displaying yearly sales growth.
+- **Monthly Sales Trend:** Bar chart showing total sales per month.
+- **Top-Performing Product Lines:** Bar chart ranking product categories by revenue.
+
+## 📂 Dataset
+- **Input File:** `sales_data.csv`
+- **Expected Columns:** 
+  - `ORDERDATE`, `SALES`, `QUANTITYORDERED`, `PRICEEACH`, `YEAR_ID`, `MONTH_ID`, `PRODUCTLINE`, `STATE`, `POSTALCODE`, `TERRITORY`
+- **Format:** CSV (Comma-Separated Values)
+
+## ⚙️ Requirements
+Ensure you have the following dependencies installed:
+
+```sh
 pip install pandas matplotlib seaborn
-Usage
-Place your sales_data.csv file in the same directory.
-Update file_path in the script if needed.
+
+
+🚀 Usage
+Place the sales_data.csv file in the same directory as the script.
 Run the script using:
+sh
+Copy
+Edit
 python script.py
-View data insights printed in the console and displayed as visualizations.
-Output
-Console: Dataset summary, mode values, and key statistics.
-Plots:
-Annual sales trend (line plot).
-Monthly sales trend (bar plot).
-Sales performance of product lines (bar plot).
-Notes
-Ensure sales_data.csv has the expected columns.
-Modify or extend the analysis as needed.
-Happy Analyzing! 🚀
+The script will display:
+Cleaned dataset info
+Summary statistics
+Sales trend visualizations
+📊 Sample Visualizations
+🔹 Annual Sales Trend
+A line chart illustrating yearly sales performance.
+
+🔹 Monthly Sales Trend
+A bar chart showing sales distribution across months.
+
+🔹 Top-Performing Product Lines
+A bar chart highlighting the highest revenue-generating product categories.
+
+🛠 Customization
+Update the file_path variable to specify a different dataset location.
+Modify visualizations or add new ones based on business needs.
+📄 License
+This project is open-source and can be freely modified and distributed.
+
+Let me know if you need any modifications! 🚀
